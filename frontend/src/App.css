@@ -1,0 +1,81 @@
+/* ===== base ===== */
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  background: #f6f7f8;
+  color: #111;
+}
+
+.container { max-width: 860px; margin: 32px auto; padding: 0 16px; }
+h1 { margin: 0 0 16px; font-size: 24px; }
+h2 { margin: 20px 0 8px; font-size: 18px; color: #374151; }
+
+/* ===== tarjeta simple ===== */
+.card {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  box-shadow: 0 1px 2px rgba(0,0,0,.04);
+}
+
+/* ===== formulario (usa tu <form> actual) ===== */
+form {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  padding: 12px;
+}
+input {
+  height: 40px;
+  padding: 0 10px;
+  min-width: 160px;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  outline: none;
+  background: #fff;
+}
+input:focus { border-color: #2563eb; }
+
+/* ===== botones ===== */
+button {
+  height: 40px;
+  padding: 0 14px;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+  background: #2563eb;
+  color: #fff;
+  cursor: pointer;
+}
+button:hover { background: #1e40af; }
+
+/* ===== lista de tareas (usa tu <ul>/<li> actuales) ===== */
+ul {
+  list-style: none;
+  margin: 12px 0 0;
+  padding: 0;
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+}
+li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 12px 14px;
+  border-top: 1px solid #e5e7eb;
+  flex-wrap: wrap;
+}
+li:first-child { border-top: none; }
+li button { background: #fff; color: #111; }
+li button:hover { background: #f3f4f6; }
+li button + button { margin-left: 6px; }
+
+/* texto tenue para el binario o detalles */
+.muted { color: #6b7280; font-size: 12px; }
+
+/* responsive sencillo */
+@media (max-width: 720px) {
+  li { align-items: flex-start; }
+}
